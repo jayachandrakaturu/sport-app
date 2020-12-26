@@ -1,0 +1,7 @@
+<h2>Login Image Banner</h2>
+<ng-container *ngIf="!showLogin">
+    <button class="btn btn-primary" (click)="toggle()">click to login</button>
+</ng-container>
+<ng-container *ngIf="showLogin">
+    <h1>Login content</h1>
+</ng-container>

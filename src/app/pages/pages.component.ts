@@ -8,7 +8,7 @@ declare const $: any;
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent implements OnInit {
-
+  filterOpenState: boolean;
   constructor(private renderer: Renderer2) {
     this.renderer.addClass(document.body, 'clsDashboard');
   }
@@ -25,6 +25,10 @@ export class PagesComponent implements OnInit {
 
   ngOnDestroy() {
     this.renderer.removeClass(document.body, 'clsDashboard');
+  }
+
+  filterOpen() {
+    this.filterOpenState = !this.filterOpenState;
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="clearfix">
-    <div class="clsLeftNav toggled open">
+    <div [ngClass]="filterOpenState ? 'clsLeftNav toggled' : 'clsLeftNav toggled open'">
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <a class="navbar-brand" href="#">
                 <img class="clsOpen" src="assets/images/app_logo.png" alt="">
@@ -51,7 +51,9 @@
         </nav>
 
         <div class="cls_button">
-            <button type="button" class="hamburger animated pf fadeInLeft is-open" data-toggle="offcanvas">
+            <button type="button"
+                [ngClass]="filterOpenState ? 'hamburger animated pf fadeInLeft is-closed' : 'hamburger animated pf fadeInLeft is-open'"
+                data-toggle="offcanvas" (click)="filterOpen()">
                 <span class="hamb-top hidden-xs"></span>
                 <span class="hamb-middle hidden-xs"></span>
                 <span class="hamb-bottom hidden-xs"></span>
@@ -60,7 +62,7 @@
         </div>
     </div>
 
-    <div class="clsRightBlock">
+    <div [ngClass]="filterOpenState ? 'clsRightBlock clsWidth-90' : 'clsRightBlock'">
         <router-outlet></router-outlet>
     </div>
 </div>

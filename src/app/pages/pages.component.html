@@ -7,7 +7,7 @@
             </a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="pages/dashboard">
+                    <a class="nav-link active" routerLink="dashboard" routerLinkActive="active">
                         <i class="fa fa-dashboard"></i>
                         <span> Dashboard </span>
                     </a>
@@ -20,15 +20,19 @@
                         <span> Form Registrion </span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="supervisor-register-form"> Supervisor </a></li>
-                        <li><a class="dropdown-item" routerLink="academy-register-form"> Academy </a></li>
-                        <li><a class="dropdown-item" routerLink="coach-register-form"> Coach </a></li>
-                        <li><a class="dropdown-item" routerLink="player-register-form"> Player </a></li>
+                        <li><a class="dropdown-item" routerLink="supervisor-register-form" routerLinkActive="active">
+                                Supervisor </a></li>
+                        <li><a class="dropdown-item" routerLink="academy-register-form" routerLinkActive="active">
+                                Academy </a></li>
+                        <li><a class="dropdown-item" routerLink="coach-register-form" routerLinkActive="active"> Coach
+                            </a></li>
+                        <li><a class="dropdown-item" routerLink="player-register-form" routerLinkActive="active"> Player
+                            </a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">
+                    <a class="nav-link">
                         <i class="fa fa-sign-out"></i>
                         <span> Logout </span>
                     </a>

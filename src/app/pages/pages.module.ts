@@ -7,20 +7,15 @@ import { AcademyRegisterFormComponent } from './academy-register-form/academy-re
 import { PlayerRegisterFormComponent } from './player-register-form/player-register-form.component';
 import { CoachRegisterFormComponent } from './coach-register-form/coach-register-form.component';
 import { SupervisorRegisterFormComponent } from './supervisor-register-form/supervisor-register-form.component';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatSelectModule } from '@angular/material/select';
+import { CustomMatModule } from '../shared/mat-module';
+
 
 @NgModule({
   declarations: [PagesComponent, AcademyRegisterFormComponent, PlayerRegisterFormComponent, CoachRegisterFormComponent, SupervisorRegisterFormComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
-    MatSliderModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatSelectModule
+    CustomMatModule
   ]
 })
 export class PagesModule { }

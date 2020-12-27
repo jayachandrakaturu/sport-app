@@ -1,7 +1,148 @@
-<h2>Login Image Banner</h2>
-<ng-container *ngIf="!showLogin">
-    <button class="btn btn-primary" (click)="toggle()">click to login</button>
-</ng-container>
-<ng-container *ngIf="showLogin">
-    <h1>Login content</h1>
-</ng-container>
+<!-- <h2>Login Image Banner</h2> -->
+
+<!-- <button class="btn btn-primary" (click)="toggle()">click to login</button> -->
+<div class="clearfix">
+    <div class="clsLeftSide">
+        <div class="clsImgBlock">
+            <img src="assets/images/cricket.png" alt="Logo">
+        </div>
+    </div>
+
+    <div class="clsRightSide clsUserSelect">
+        <ng-container *ngIf="!showLogin">
+            <div class="container-fluid">
+                <div class="clearfix text-center mb-50">
+                    <img src="assets/images/app_logo.png" alt="">
+
+                    <h2 class="info-dark-c text-center mb-40"> Please Choose Your Role </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="clsInner" (click)="toggle()">
+                            <img src="assets/images/super_admin.svg" alt="">
+                            <span> Super Admin </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="clsInner" (click)="toggle()">
+                            <img src="assets/images/supervisior.svg" alt="">
+                            <span> Supervisior </span>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="clsInner" (click)="toggle()">
+                            <img src="assets/images/academy.svg" alt="">
+                            <span> Academy </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="showLogin">
+            <div class="clsFormBlock clsBeforeLogin">
+                <div class="clearfix text-center mb-50">
+                    <img src="assets/images/app_logo.png" alt="">
+
+                    <h2 class="info-c"> Login </h2>
+                </div>
+
+                <form>
+                    <div class="form-group pb-10">
+                        <label for="mobile_number"> Mobile Number </label>
+                        <input type="phone" class="form-control" id="mobile_number" min="0" maxlength="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pin"> Pin </label>
+                        <input type="password" class="form-control" id="pin" min="0" maxlength="4"
+                            pattern="[1-9][0-9]{4}">
+                    </div>
+
+                    <div class="text-right">
+                        <button type="button" id="forget_pin" class="btn btn-link width_in no-pad"> Forget Pin </button>
+                    </div>
+
+                    <button routerLink="pages/dashboard" class="btn btn-info clsWidth-100 mt-15 arrow-animate"> login
+                    </button>
+                </form>
+            </div>
+
+            <div class="clsFormBlock clsMobile_verify d-none">
+                <div class="clearfix text-center mb-50">
+                    <img src="assets/images/app_logo.png" alt="">
+                    <h2 class="info-c"> Mobile Number Verification </h2>
+                    <p class="text-12">
+                        Please Enter your Phone Number to Continue
+                    </p>
+                </div>
+
+                <form>
+                    <div class="form-group pb-10">
+                        <!-- <label for="verify_code"> Verification Code </label> -->
+                        <input type="number" class="form-control" id="verify_code" min="0" maxlength="4" required>
+                    </div>
+
+                    <div class="clearfix text-center">
+                        <button type="button" class="btn btn-info clsWidth-100 mt-15 arrow-animate" id="get_otp"> Get
+                            OTP </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="clsFormBlock clsVerify d-none">
+                <div class="clearfix text-center mb-50">
+                    <img src="assets/images/app_logo.png" alt="">
+                    <h2 class="info-c"> Verification </h2>
+                    <p class="text-12">
+                        We have sent a verification code on xxxxxxx656 number
+                    </p>
+                </div>
+
+                <form>
+                    <div class="form-group pb-10">
+                        <label for="verify_code"> Verification Code </label>
+                        <input type="number" class="form-control" id="verify_code" min="0" maxlength="4" required>
+                    </div>
+
+                    <div class="clearfix text-center">
+                        <div class="text-right">
+                            <button type="button" class="btn btn-link width_in no-pad"> Resend Code </button>
+                        </div>
+
+                        <button type="button" class="btn btn-info clsWidth-100 mt-15 arrow-animate"
+                            id="newpin_generate"> Confirm </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="clsFormBlock clsNewPinLogin d-none">
+                <div class="clearfix text-center mb-50">
+                    <img src="assets/images/app_logo.png" alt="">
+                </div>
+
+                <form>
+                    <div class="form-group pb-10">
+                        <label for="new_pin"> New Pin </label>
+                        <input type="number" class="form-control" id="new_pin" min="0" maxlength="4" required>
+                    </div>
+
+                    <div class="form-group pb-10">
+                        <label for="confirm"> Confirm Pin </label>
+                        <input type="number" class="form-control" id="confirm" min="0" maxlength="4" required>
+                    </div>
+
+                    <div class="clearfix text-center">
+                        <button type="button" class="btn btn-info clsWidth-100 mt-15 arrow-animate"
+                            data-bs-toggle="modal" data-bs-target="#NewUpdatePin">
+                            Update Pin
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </ng-container>
+    </div>
+</div>

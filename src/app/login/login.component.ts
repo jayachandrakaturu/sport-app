@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   showLogin: boolean;
-  constructor() { }
+  constructor(private renderer: Renderer2) {
+    this.renderer.addClass(document.body, 'clsAdminPage');
+  }
+
 
   ngOnInit(): void {
   }
-  toggle() { 
+
+  toggle() {
     this.showLogin = !this.showLogin;
+  }
+
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'clsAdminPage');
   }
 
 }

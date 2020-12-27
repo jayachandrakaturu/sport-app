@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import 'assets/stylesheet/font-awesome.min.css';
+@import 'assets/stylesheet/custom-fonts.scss';
+@import 'assets/stylesheet/custom_themes.scss';
+@import 'assets/stylesheet/custom-hover-effect.scss';
+@import 'assets/stylesheet/custom_navbar.scss';
+@import 'assets/stylesheet/custom_responsive.scss';
+@import 'assets/stylesheet/custom_style.scss';

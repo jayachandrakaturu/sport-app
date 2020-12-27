@@ -4,6 +4,7 @@ import { AcademyRegisterFormComponent } from './academy-register-form/academy-re
 import { CoachRegisterFormComponent } from './coach-register-form/coach-register-form.component';
 import { PagesComponent } from './pages.component';
 import { PlayerRegisterFormComponent } from './player-register-form/player-register-form.component';
+import { SupervisorRegisterFormComponent } from './supervisor-register-form/supervisor-register-form.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'coach-register-form',
         component: CoachRegisterFormComponent
+      },
+      {
+        path: 'supervisor-register-form',
+        component: SupervisorRegisterFormComponent
       }
     ],
   }

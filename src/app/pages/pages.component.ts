@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) {
+    this.renderer.addClass(document.body, 'clsDashboard');
+  }
 
   ngOnInit(): void {
+  }
+
+  ngOnDestroy() {
+    this.renderer.removeClass(document.body, 'clsDashboard');
   }
 
 }

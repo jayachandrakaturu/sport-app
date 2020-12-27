@@ -1,0 +1,109 @@
+<div class="container-fluid">
+    <div class="pb-10 sep-bot">
+        <h2 class=""> Supervisor Registrion Form </h2>
+    </div>
+
+    <div class="clearfix mt-20">
+        <form action="">
+            <div class="row">
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> First Name </mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Middle Name </mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Last Name </mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Phone Number </mat-label>
+                        <input type="number" matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Email Id </mat-label>
+                        <input type="email" matInput>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> DOB </mat-label>
+                        <input type="date" matInput>
+                    </mat-form-field>
+                    <!-- <mat-form-field appearance="fill">
+                        <mat-label> DOB </mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field> -->
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Status </mat-label>
+                        <select matNativeControl>
+                            <option> Exeprience </option>
+                            <option> Freshers </option>
+                        </select>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Exeprience </mat-label>
+                        <select matNativeControl>
+                            <option> 0-6 Months </option>
+                            <option> 1 to 3 Years </option>
+                            <option> 3 to 5 Years </option>
+                            <option> above 5 Years </option>
+                        </select>
+                    </mat-form-field>
+                </div>
+
+                <!-- <div class="col-sm-4">              
+                    <label for="profile"> Profile </label>
+    
+                    <div class="form-group clsFile-btn">
+                        <label for="profile"> Upload </label>
+                        <input type="file" class="form-control" id="profile">
+                    </div>
+                </div> -->
+
+                <div class="col-sm-4">
+                    <mat-form-field>
+                        <mat-label> Address </mat-label>
+                        <textarea matInput></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="clearfix text-right mt-30">
+                <button type="submit" class="btn btn-white">
+                    <img class="btnIcon" src="assets/images/icons/black_clear.svg" alt="">
+                    Reset
+                </button>
+
+                <button type="submit" class="btn btn-info">
+                    <img class="btnIcon" src="assets/images/icons/white_submit.svg" alt="">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,3 +1,52 @@
-<h3>HER HERE</h3>
+<div class="clearfix">
+    <div class="clsLeftNav toggled open">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <a class="navbar-brand" href="#">
+                <img class="clsOpen" src="assets/images/app_logo.png" alt="">
+                <img class="clsClose" src="assets/images/favicon.png" alt="">
+            </a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="pages/dashboard">
+                        <i class="fa fa-dashboard"></i>
+                        <span> Dashboard </span>
+                    </a>
+                </li>
 
-<router-outlet></router-outlet>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa fa-file-text-o"></i>
+                        <span> Form Registrion </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="supervisor-register-form"> Supervisor </a></li>
+                        <li><a class="dropdown-item" routerLink="academy-register-form"> Academy </a></li>
+                        <li><a class="dropdown-item" routerLink="coach-register-form"> Coach </a></li>
+                        <li><a class="dropdown-item" routerLink="player-register-form"> Player </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <i class="fa fa-sign-out"></i>
+                        <span> Logout </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="cls_button">
+            <button type="button" class="hamburger animated pf fadeInLeft is-open" data-toggle="offcanvas">
+                <span class="hamb-top hidden-xs"></span>
+                <span class="hamb-middle hidden-xs"></span>
+                <span class="hamb-bottom hidden-xs"></span>
+                <span class="visible-xs"> <i class="mdi mdi-menu"> </i></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="clsRightBlock">
+        <router-outlet></router-outlet>
+    </div>
+</div>

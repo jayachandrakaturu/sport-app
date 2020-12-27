@@ -1,1 +1,481 @@
-<p>dashboard works!</p>
+<div class="container-fluid">
+    <div class="pb-10 sep-bot">
+        <h2 class=""> Dashboard </h2>
+    </div>
+
+    <div class="clearfix mt-20">
+        <p class="text-18 db-c"> Progress </p>
+
+        <div class="clearfix">
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row clsDataValue pt-40">
+        <div class="col-sm-3">
+            <div class="clsInner">
+                <div class="media pb-10 text-center">
+                    <img class="media-object" src="assets/images/icons/supervisior.svg" alt="Supervisior"
+                        style="width: 41px; height: 70px;">
+                    <div class="media-body pl-10">
+                        <p class="whitec"> Total Supervisior </p>
+                        <h2> 2896 </h2>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-sm-6 clsBor-right">
+                        <p class="whitec"> Male </p>
+                        <h2> 102 </h2>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="whitec"> Female </p>
+                        <h2> 630 </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="clsInner">
+                <div class="media pb-10 text-center">
+                    <img class="media-object" src="assets/images/icons/academy.svg" alt="users"
+                        style="width: 50px; height: 50px;">
+                    <div class="media-body pl-10">
+                        <p class="whitec"> Total Academy </p>
+                        <h2> 2560 </h2>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-sm-6 clsBor-right">
+                        <p class="whitec"> Male </p>
+                        <h2> 135 </h2>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="whitec"> Female </p>
+                        <h2> 962 </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="clsInner">
+                <div class="media pb-10 text-center">
+                    <img class="media-object" src="assets/images/icons/coach.svg" alt="phone"
+                        style="width: 41px; height: 70px;">
+                    <div class="media-body pl-10">
+                        <p class="whitec"> Total Coach </p>
+                        <h2> 2896 </h2>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-sm-6 clsBor-right">
+                        <p class="whitec"> Male </p>
+                        <h2> 1352 </h2>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="whitec"> Female </p>
+                        <h2> 587 </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="clsInner">
+                <div class="media pb-10 text-center">
+                    <img class="" src="assets/images/icons/player.svg" alt="code" style="width: 70px; height: 60px;">
+                    <div class="media-body pl-10">
+                        <p class="whitec"> Total Player </p>
+                        <h2> 380 </h2>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-sm-6 clsBor-right">
+                        <p class="whitec"> Male </p>
+                        <h2> 600 </h2>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="whitec"> Female </p>
+                        <h2> 157 </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-60 clearfix">
+        <p class="text-21 db-c"> Users </p>
+
+        <div class="clearfix mb-30">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> Name </th>
+                        <th> Mobile </th>
+                        <th> Email </th>
+                        <th> Dob </th>
+                        <th> Role </th>
+                        <th> Academy name </th>
+                        <th> Exeprience </th>
+                        <th> Actions </th>
+                        <th>
+                            <div class="rightFilterSet f-right">
+                                <button data-toggle="tooltip" data-placement="bottom" id="filterOpen" class="filterBtn"
+                                    title="Filters">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
+                                        class="svg-md">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path fill-opacity=".01" fill="#FFF" opacity=".01" d="M0 0h14v14H0z">
+                                            </path>
+                                            <path d="M13.5.5H.5L5.655 7v6.5l2.69-1.345V7z" stroke="#107896"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </button>
+
+                                <div class="filterContainer clearfix">
+                                    <div class="filterTitle">
+                                        <p>Filter</p>
+                                    </div>
+                                    <div class="fiterBody clearfix">
+                                        <div class="clearfix ptb-15">
+                                            <div class="form-group">
+                                                <label class="filterLabel"> Role </label>
+                                                <div class="clsSelect-icon">
+                                                    <select name="" id="role" class="form-control">
+                                                        <option value=""> Supervisior </option>
+                                                        <option value=""> Academy </option>
+                                                        <option value=""> Coach </option>
+                                                        <option value=""> Player </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="filterLabel"> Academy Name </label>
+                                                <div class="clsSelect-icon">
+                                                    <select name="" id="academy_name" class="form-control">
+                                                        <option value=""> Chennai </option>
+                                                        <option value=""> Kerala </option>
+                                                        <option value=""> Mumbai </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="filterLabel"> Exeprience </label>
+                                                <div class="clsSelect-icon">
+                                                    <select name="" id="exeprience" class="form-control">
+                                                        <option value=""> 0-6 Months </option>
+                                                        <option value=""> 1 to 3 Years </option>
+                                                        <option value=""> 3 to 5 Years </option>
+                                                        <option value=""> above 5 Years </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="clearfix text-right">
+                                                <button type="button" class="btn btn-white btn-sm" id="filterClose">
+                                                    Close
+                                                </button>
+                                                <button type="reset" class="btn btn-info btn-sm"> Reset
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="cur-poin" onclick="document.location = 'admin_users.html';">
+                        <td> 1 </td>
+                        <td> Ronald </td>
+                        <td> 9876543210 </td>
+                        <td> ronald@gmail.com </td>
+                        <td> 01/01/2020 </td>
+                        <td> Supervisior </td>
+                        <td> MAC </td>
+                        <td class="text-center"> 5 Y </td>
+                        <td class="tableActionBtns">
+                            <div class="actionBtnQa claerfix">
+                                <div class="rightNewAddSet f-right">
+                                    <div class="defultIconSetPerson">
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="View">
+                                                <i class="fa fa-eye"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Delete">
+                                                <i class="fa fa-trash-o"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew beforeHover transparantDotBtn">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" viewBox="0 0 512 512"
+                                                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <g>
+                                                        <circle cx="256" cy="256" r="64" />
+                                                        <circle cx="256" cy="448" r="64" />
+                                                        <circle cx="256" cy="64" r="64" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td> </td>
+                    </tr>
+
+                    <tr class="cur-poin" onclick="document.location = 'admin_users.html';">
+                        <td> 2 </td>
+                        <td> Ronald </td>
+                        <td> 9876543210 </td>
+                        <td> ronald@gmail.com </td>
+                        <td> 01/01/2020 </td>
+                        <td> Supervisior </td>
+                        <td> MAC </td>
+                        <td class="text-center"> 5 Y </td>
+                        <td class="tableActionBtns">
+                            <div class="actionBtnQa claerfix">
+                                <div class="rightNewAddSet f-right">
+                                    <div class="defultIconSetPerson">
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="View">
+                                                <i class="fa fa-eye"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Delete">
+                                                <i class="fa fa-trash-o"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew beforeHover transparantDotBtn">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" viewBox="0 0 512 512"
+                                                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <g>
+                                                        <circle cx="256" cy="256" r="64" />
+                                                        <circle cx="256" cy="448" r="64" />
+                                                        <circle cx="256" cy="64" r="64" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td> </td>
+                    </tr>
+
+                    <tr class="cur-poin" onclick="document.location = 'admin_users.html';">
+                        <td> 3 </td>
+                        <td> Ronald </td>
+                        <td> 9876543210 </td>
+                        <td> ronald@gmail.com </td>
+                        <td> 01/01/2020 </td>
+                        <td> Supervisior </td>
+                        <td> MAC </td>
+                        <td class="text-center"> 5 Y </td>
+                        <td class="tableActionBtns">
+                            <div class="actionBtnQa claerfix">
+                                <div class="rightNewAddSet f-right">
+                                    <div class="defultIconSetPerson">
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="View">
+                                                <i class="fa fa-eye"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Delete">
+                                                <i class="fa fa-trash-o"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew beforeHover transparantDotBtn">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" viewBox="0 0 512 512"
+                                                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <g>
+                                                        <circle cx="256" cy="256" r="64" />
+                                                        <circle cx="256" cy="448" r="64" />
+                                                        <circle cx="256" cy="64" r="64" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td> </td>
+                    </tr>
+
+                    <tr class="cur-poin" onclick="document.location = 'admin_users.html';">
+                        <td> 4 </td>
+                        <td> Ronald </td>
+                        <td> 9876543210 </td>
+                        <td> ronald@gmail.com </td>
+                        <td> 01/01/2020 </td>
+                        <td> Supervisior </td>
+                        <td> MAC </td>
+                        <td class="text-center"> 5 Y </td>
+                        <td class="tableActionBtns">
+                            <div class="actionBtnQa claerfix">
+                                <div class="rightNewAddSet f-right">
+                                    <div class="defultIconSetPerson">
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="View">
+                                                <i class="fa fa-eye"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Edit">
+                                                <i class="fa fa-pencil"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew searchIcon addNew2 clsFontIcon">
+                                            <span container="body" data-toggle="tooltip" data-placement="bottom"
+                                                title="Delete">
+                                                <i class="fa fa-trash-o"></i>
+                                            </span>
+                                        </button>
+
+                                        <button class="btn addBtnsNew beforeHover transparantDotBtn">
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+                                                    x="0px" y="0px" viewBox="0 0 512 512"
+                                                    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                                    <g>
+                                                        <circle cx="256" cy="256" r="64" />
+                                                        <circle cx="256" cy="448" r="64" />
+                                                        <circle cx="256" cy="64" r="64" />
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="clearfix">
+            <ul class="pagination justify-content-center">
+                <li class="disabled no-bor">
+                    <a href="#" aria-label="Previous">
+                        <i class="fa fa-angle-double-left"></i>
+                    </a>
+                </li>
+
+                <li class="disabled no-bor">
+                    <a href="#" aria-label="Previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"> 1 </a>
+                </li>
+
+                <li>
+                    <a href="#"> 2 </a>
+                </li>
+
+                <li>
+                    <a href="#"> 3 </a>
+                </li>
+
+                <li>
+                    <a href="#"> 4 </a>
+                </li>
+
+                <li>
+                    <a href="#"> 5 </a>
+                </li>
+
+                <li>
+                    <a href="#"> 6 </a>
+                </li>
+
+                <li class="no-bor">
+                    <a href="#" aria-label="Next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+
+                <li class="no-bor">
+                    <a href="#" aria-label="Next">
+                        <i class="fa fa-angle-double-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

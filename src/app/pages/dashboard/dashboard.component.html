@@ -132,8 +132,8 @@
                         <th> Actions </th>
                         <th>
                             <div class="rightFilterSet f-right">
-                                <button data-toggle="tooltip" data-placement="bottom" id="filterOpen" class="filterBtn"
-                                    title="Filters">
+                                <button data-toggle="tooltip" data-placement="bottom" (click)="filterOpen()"
+                                    class="filterBtn" title="Filters">
                                     <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"
                                         class="svg-md">
                                         <g fill="none" fill-rule="evenodd">
@@ -146,49 +146,45 @@
                                     </svg>
                                 </button>
 
-                                <div class="filterContainer clearfix">
+                                <div
+                                    [ngClass]="filterOpenState ? 'filterContainer clearfix active' : 'filterContainer clearfix'">
                                     <div class="filterTitle">
                                         <p>Filter</p>
                                     </div>
                                     <div class="fiterBody clearfix">
                                         <div class="clearfix ptb-15">
-                                            <div class="form-group">
-                                                <label class="filterLabel"> Role </label>
-                                                <div class="clsSelect-icon">
-                                                    <select name="" id="role" class="form-control">
-                                                        <option value=""> Supervisior </option>
-                                                        <option value=""> Academy </option>
-                                                        <option value=""> Coach </option>
-                                                        <option value=""> Player </option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <mat-form-field>
+                                                <mat-label> Role </mat-label>
+                                                <mat-select>
+                                                    <mat-option value="Supervisior"> Supervisior </mat-option>
+                                                    <mat-option value="Academy"> Academy </mat-option>
+                                                    <mat-option value="Coach"> Coach </mat-option>
+                                                    <mat-option value="Player"> Player </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
 
-                                            <div class="form-group">
-                                                <label class="filterLabel"> Academy Name </label>
-                                                <div class="clsSelect-icon">
-                                                    <select name="" id="academy_name" class="form-control">
-                                                        <option value=""> Chennai </option>
-                                                        <option value=""> Kerala </option>
-                                                        <option value=""> Mumbai </option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <mat-form-field>
+                                                <mat-label> Academy Name </mat-label>
+                                                <mat-select>
+                                                    <mat-option value="Chennai"> Chennai </mat-option>
+                                                    <mat-option value="Kerala"> Kerala </mat-option>
+                                                    <mat-option value="Mumbai"> Mumbai </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
 
-                                            <div class="form-group">
-                                                <label class="filterLabel"> Exeprience </label>
-                                                <div class="clsSelect-icon">
-                                                    <select name="" id="exeprience" class="form-control">
-                                                        <option value=""> 0-6 Months </option>
-                                                        <option value=""> 1 to 3 Years </option>
-                                                        <option value=""> 3 to 5 Years </option>
-                                                        <option value=""> above 5 Years </option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <mat-form-field>
+                                                <mat-label> Exeprience </mat-label>
+                                                <mat-select>
+                                                    <mat-option value="1"> 0-6 Months </mat-option>
+                                                    <mat-option value="2"> 1 to 3 Years </mat-option>
+                                                    <mat-option value="3"> 3 to 5 Years </mat-option>
+                                                    <mat-option value="4"> above 5 Years </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
 
                                             <div class="clearfix text-right">
-                                                <button type="button" class="btn btn-white btn-sm" id="filterClose">
+                                                <button type="button" class="btn btn-white btn-sm"
+                                                    (click)="filterOpen()">
                                                     Close
                                                 </button>
                                                 <button type="reset" class="btn btn-info btn-sm"> Reset

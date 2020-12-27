@@ -14,11 +14,12 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-file-text-o"></i>
                         <span> Form Registrion </span>
                     </a>
+
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" routerLink="supervisor-register-form" routerLinkActive="active">
                                 Supervisor </a></li>
@@ -30,9 +31,18 @@
                             </a></li>
                     </ul>
                 </li>
+            </ul>
 
+            <ul class="navbar-nav mr-auto clsChangePwd">
                 <li class="nav-item">
                     <a class="nav-link">
+                        <i class="fa fa-user-circle"></i>
+                        <span> Profile </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="../login">
                         <i class="fa fa-sign-out"></i>
                         <span> Logout </span>
                     </a>

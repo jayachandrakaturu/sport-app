@@ -83,11 +83,11 @@
   margin-bottom: 0px;
 
   .clsLeftNav {
-    background   : $grad-brand-info;
-    // width     : 230px;
-    height       : 100%;
-    float        : left;
-    position     : fixed;
+    background: $grad-brand-info;
+    width     : 230px;
+    height    : 100%;
+    float     : left;
+    position  : fixed;
 
     .navbar {
       position: static;
@@ -97,6 +97,7 @@
 
     .navbar-nav {
       float: none;
+      width: 100%;
 
       li {
         float: none;
@@ -191,7 +192,8 @@
     }
 
     .clsChangePwd {
-      @include absolute(bottom 10px);
+      @include absolute(bottom 10px left 0px);
+      padding-left: 15px;
 
       li {
 
@@ -203,7 +205,7 @@
               content: '';
               display: $b;
               height : 1px;
-              @include absolute(left 30px right 10px bottom -4px);
+              @include absolute(left 10px right 0px bottom -4px);
               background: $dropdown-border;
             }
           }

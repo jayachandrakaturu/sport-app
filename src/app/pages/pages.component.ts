@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, Renderer2 } from '@angular/core';
 
+declare const $: any;
+
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
@@ -12,6 +14,13 @@ export class PagesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    $(document).ready(function () {
+      setTimeout(function () {
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+      }, 500);
+    });
   }
 
   ngOnDestroy() {
